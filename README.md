@@ -11,4 +11,6 @@ so how to use it?🧐
 
 👀the Mapping is customizable.
 
+(the Crypt files are basically Both Coding and Decoding)
+
 that's it, enjoy❤
