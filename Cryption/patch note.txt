@@ -41,6 +41,6 @@ ________________________________________________________________________________
 🔹 Dark Mode for GUI customization 
 🔹 Drag & Drop support for mapping imports 
 🔹 Ability to encrypt entire files instead of just text 
-🔹 Advanced encryption algorithms for stronger security
+🔹 Advanced encryption algorithms for stronger security(Not Promising abt This One!)
 
 ________________________________________________________________________________________________________________________________________________
