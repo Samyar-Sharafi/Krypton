@@ -1,0 +1,36 @@
+import string
+
+# Define shift amount
+shift = 5
+characters = string.ascii_letters + string.digits
+
+def create_mappings(shift, reverse=False):
+    """Creates encryption mappings with optional reverse shift."""
+    if reverse:
+        fixed_mapping = {char: characters[(i - shift) % len(characters)] for i, char in enumerate(characters)}
+    else:
+        fixed_mapping = {char: characters[(i + shift) % len(characters)] for i, char in enumerate(characters)}
+    return fixed_mapping
+
+# Choose encryption mode
+mode = input("Type N for Normal Shift or R for Reverse Shift: ").strip().lower()
+reverse_shift = mode == "r"
+
+# Generate mapping
+fixed_mapping = create_mappings(shift, reverse=reverse_shift)
+
+def encrypt(text):
+    return ''.join(fixed_mapping.get(char, char) for char in text)
+
+while True:
+    text = input("\nEnter text to encrypt (or Q to quit): ").strip()
+    if text.lower() == "q":
+        print("Goodbye!")
+        break
+    print("Encrypted:", encrypt(text))
+
+    # Save mapping
+    with open("mapping.txt", "w") as f:
+        for char, mapped_char in fixed_mapping.items():
+            f.write(f"{char} -> {mapped_char}\n")
+    print("Character mapping saved in 'mapping.txt'.")
