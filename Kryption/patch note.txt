@@ -1,0 +1,46 @@
+🔥 Patch Notes: Cryption v1.0
+📅 Release Date: May 17, 2025 🚀 Status: Stable, Fully Functional
+
+🆕 Features & Enhancements
+✅ Two separate apps (encrypt.py & decrypt.py) for better modularity.
+✅ Fully customizable mapping.txt—users can edit mappings manually.
+✅ Handles uppercase & lowercase inputs seamlessly.
+✅ Auto-detects invalid lines in mapping.txt and skips them gracefully.
+✅ Improved console clarity—clears every two operations for better readability.
+✅ Users can now choose to create a new mapping or exit if missing (encrypt.py).
+✅ Encryption leaves unknown characters (spaces, punctuation) unchanged.
+
+🔧 Fixes & Bug Squashes
+🐛 Fixed crash due to missing mapping.txt—now asks users to create one.
+🐛 Resolved decoding errors caused by unmapped numbers—removed number-based mappings.
+🐛 Implemented input validation—prevents crashes due to incorrect user responses.
+🐛 Improved error handling—invalid mapping lines no longer break execution.
+
+🎯 Planned Future Updates (v1.1+)
+🔹 GUI version for a more user-friendly experience.
+🔹 Ability to import/export mappings with an intuitive interface.
+🔹 Custom encryption settings (user-defined mappings).
+_____________________________________________________________________________________________________________________________________________
+🔥 Patch Notes: Cryption v2.0
+📅 Release Date: May 21, 2025 🚀 Status: Major GUI Upgrade - Fully Interactive
+
+🆕 New Features & Enhancements
+✅ GUI Integration with Tkinter – No more command-line inputs!
+✅ Import Custom Mappings – Load mapping files dynamically from anywhere.
+✅ Export Mapping Files – Save your modified mappings with ease.
+✅ User-defined mappings – Customize your encryption directly inside the GUI.
+✅ Instant Encryption & Decryption – One-click functionality for fast results.
+
+🔧 Fixes & Bug Squashes
+🐛 Fixed crash when mapping.txt was missing – Now prompts users to import or create one. 
+🐛 Resolved formatting issues in mapping files – Skips invalid lines instead of breaking execution. 
+🐛 Fixed decryption inconsistencies – Mapping system now fully optimized for accuracy. 
+🐛 Improved error-handling – Prevents crashes from unexpected inputs and formatting mistakes.
+
+🎯 Planned Future Updates (v2.1+)
+🔹 Dark Mode for GUI customization 
+🔹 Drag & Drop support for mapping imports 
+🔹 Ability to encrypt entire files instead of just text 
+🔹 Advanced encryption algorithms for stronger security
+
+________________________________________________________________________________________________________________________________________________

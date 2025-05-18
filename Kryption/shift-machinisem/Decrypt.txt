@@ -1,0 +1,31 @@
+import string
+
+# Define shift amount
+shift = 5
+characters = string.ascii_letters + string.digits
+
+def create_mappings(shift, reverse=False):
+    """Creates decryption mappings based on encryption settings."""
+    if reverse:
+        fixed_mapping = {char: characters[(i - shift) % len(characters)] for i, char in enumerate(characters)}
+    else:
+        fixed_mapping = {char: characters[(i + shift) % len(characters)] for i, char in enumerate(characters)}
+    reverse_mapping = {v: k for k, v in fixed_mapping.items()}
+    return reverse_mapping
+
+# Choose decryption mode
+mode = input("Type N for Normal Shift or R for Reverse Shift: ").strip().lower()
+reverse_shift = mode == "r"
+
+# Generate mapping
+reverse_mapping = create_mappings(shift, reverse=reverse_shift)
+
+def decrypt(encrypted_text):
+    return ''.join(reverse_mapping.get(char, char) for char in encrypted_text)
+
+while True:
+    encrypted_text = input("\nEnter text to decrypt (or Q to quit): ").strip()
+    if encrypted_text.lower() == "q":
+        print("Goodbye!")
+        break
+    print("Decrypted:", decrypt(encrypted_text))
